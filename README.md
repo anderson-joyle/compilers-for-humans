@@ -8,3 +8,15 @@
 
 ## Introduction
 Coming soon.
+
+
+## Lexical analysis
+Coming soon.
+
+
+## Syntax analysis
+Coming soon.
+
+
+## Semantic analysis
+Coming soon.
