@@ -22,7 +22,30 @@ Wikipedia says:
 This article will use [Power Fx](https://github.com/microsoft/Power-Fx) (open-source language written in C#) as a practical example of how compilers work and their common phases.
 
 ## Lexical analysis
-Coming soon.
+Wikipedia says:
+> The process of converting a sequence of characters into a sequence of lexical tokens (strings with an assigned and thus identified meaning).
+
+
+Let's take the following sentence (underscore char represents a blank space):
+> Bob_drove_home.
+
+
+We, humans, identify some elements from English grammar and American culture:
+  - Subject (Bob)
+  - Punctuation (blank space)
+  - Verb (drive)
+  - Punctuation (blank space)
+  - Object (home)
+  - Punctuation (.)  
+
+Now, imagine that instead of having the full sentence upfront, you are giving one character per turn:
+> B  
+> Bo  
+> Bob  
+> Bob_  
+> Bob_d  
+> ...  
+> Bob_drove_home.
 
 
 ## Syntax analysis
