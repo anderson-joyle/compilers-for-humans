@@ -27,25 +27,28 @@ Wikipedia says:
 
 
 Let's take the following sentence (underscore char represents a blank space):
-> Bob_drove_home.
+> BOB_DROVE_HOME.
 
 
 We, humans, identify some elements from English grammar and American culture:
-  - Subject (Bob)
+  - Subject (BOB)
   - Punctuation (blank space)
-  - Verb (drive)
+  - Verb (DRIVE)
   - Punctuation (blank space)
-  - Object (home)
+  - Object (HOME)
   - Punctuation (.)  
 
-Now, imagine that instead of having the full sentence upfront, you are giving one character per turn:
-> B  
-> Bo  
-> Bob  
-> Bob_  
-> Bob_d  
-> ...  
-> Bob_drove_home.
+Now, imagine that instead of having the full sentence upfront, you are giving one character per turn. Let's do a lexical analysis, shall we?
+> **B** - Doesn't mean anything  
+> **BO** - Doesn't mean anything  
+> **BOB** - Doesn't mean anything  
+> **BOB_**  - Wait! This is a blank space, meaning that we finish a word and a new one is about to start. **BOB** is a common name so we can mark it as the subject. Plus, a blank space is a punctuation. It's a good idea to keep a record of these elements
+| Element         | Type     |
+|--------------|-----------|
+| BOB |   Subject   |
+| blank space      | Punctuation |
+
+> **BOB_D** 
 
 
 ## Syntax analysis
