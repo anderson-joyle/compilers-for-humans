@@ -52,7 +52,7 @@ Moving forward:
 
 If we organize the results in a table-like structure, it would be something like the following:  
 
-| Content       | Type        |
+| Token         | Kind        |
 |---------------|-------------|
 | BOB           | Subject     | 
 | (blank space) | Punctuation |
@@ -67,16 +67,12 @@ We just performed a basic lexical analysis, or in other words, TOKENIZATION. The
 Note that at this phase we are not concerned if there is any grammar error or unknown word or punctuation. The tokenization job is simply to split the sentence into tokens, categorize them, and nothing more.  
 
 If we take the previous sentence, add an unknown word to it, and perform the lexical analysis again, we will end up with the following list:  
-  - Subject (BOB)
-  - Punctuation (blank space)
-  - **Unknown (ABCDEF)**
-  - Punctuation (blank space)
-  - Object (HOME)
-  - Punctuation (.)
 
-| Content       | Type        |
+| Token         | Kind        |
 |---------------|-------------|
 | BOB           | Subject     | 
+| (blank space) | Punctuation |
+| ABCDEF        | Unknown     |
 | (blank space) | Punctuation |
 | DRIVE         | Verb        |
 | (blank space  | Punctuation |
