@@ -33,7 +33,7 @@ We, humans, identify some elements of English grammar and American culture. Now,
 > **B** - Doesn't mean anything.  
 > **BO** - Doesn't mean anything.  
 > **BOB** - Doesn't mean anything.  
-> **BOB **  - Wait! This is a blank space, meaning we finish a word. **BOB** is a common name so we can mark it as the subject. Plus, a blank space is punctuation.  
+> **BOB **  - Wait! This is a blank space, meaning we finish a word. **BOB** is a word. Plus, a blank space is punctuation.  
 
 Moving forward:  
 > **D** - Doesn't mean anything.  
@@ -41,48 +41,35 @@ Moving forward:
 > **DRO** - Doesn't mean anything.  
 > **DROV** - Doesn't mean anything.  
 > **DROVE** - Doesn't mean anything.  
-> **DROVE ** - Wait! This is a blank space, meaning that we finish a word. **DROVE** is a known word and we can mark it as a verb. Plus, a blank space is punctuation.  
+> **DROVE ** - Wait! This is a blank space, meaning that we finish a word. **DROVE** is a word. Plus, a blank space is punctuation.  
 
 Moving forward:  
 > **H** - Doesn't mean anything.  
 > **HO** - Doesn't mean anything.  
 > **HOM** - Doesn't mean anything.  
 > **HOME** - Doesn't mean anything.  
-> **HOME.** - Wait! This is a period, meaning that we finish a word. **HOME** is a known word and we can mark it as an object. Plus, a period is punctuation.  
+> **HOME.** - Wait! This is a period, meaning that we finish a word. **HOME** is a word. Plus, a period is punctuation.  
 
 If we organize the results in a table-like structure, it would be something like the following:  
 
 | Token         | Kind        |
 |---------------|-------------|
-| BOB           | Subject     | 
+| BOB           | Word        | 
 | (blank space) | Punctuation |
-| DRIVE         | Verb        |
+| DRIVE         | Word        |
 | (blank space  | Punctuation |
-| HOME          | Object      |
+| HOME          | Word        |
 | .             | Punctuation |
 
 
-We just performed a basic lexical analysis, or in other words, TOKENIZATION. The product of this analysis is a list with all tokens found in the input sentence, categorized by each of their types (subject, punctuation, etc).  
+We just performed a basic lexical analysis, or in other words, TOKENIZATION. The product of this analysis is a list containing all tokens found in the input sentence, categorized by each of their types (word, punctuation, etc).  
 
-Note that at this phase we are not concerned if there is any grammar error or unknown word or punctuation. The tokenization job is simply to split the sentence into tokens, categorize them, and nothing more.  
-
-If we take the previous sentence, add an unknown word to it, and perform the lexical analysis again, we will end up with the following list:  
-
-| Token         | Kind        |
-|---------------|-------------|
-| BOB           | Subject     | 
-| (blank space) | Punctuation |
-| ABCDEF        | Unknown     |
-| (blank space) | Punctuation |
-| DRIVE         | Verb        |
-| (blank space  | Punctuation |
-| HOME          | Object      |
-| .             | Punctuation |
+Note that at this phase we don't care if there is any grammar error or if a word is unknown. The tokenization job is simply to split the sentence into tokens, categorize them, and nothing more.  
 
   
 
 Now, let's move on to a real-world scenario.  
-`Abs(-10)` is a valid Power-Fx expression. We can tokenize it by calling the following code:
+`Abs(-10)` is a valid [Power Fx](https://github.com/microsoft/Power-Fx) expression. We can tokenize it by calling the following code:
 ```
 using Microsoft.PowerFx;
 
